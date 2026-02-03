@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomPanelContainer" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        app:cardBackgroundColor="#CC1E1E1E"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TextView
+            android:id="@+id/timerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"
+            android:text="00:00"
+            android:textColor="@color/colorAccent"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/bottomPanelContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@color/cardBackground"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:id="@+id/inputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:id="@+id/inputName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Nazwij swoją trasę..."
+                android:textColorHint="@color/textColorSecondary"
+                android:textColor="@color/textColorPrimary"
+                android:backgroundTint="@color/colorAccent"
+                android:paddingStart="4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:text="Anuluj"
+                    android:textColor="@color/textColorPrimary"
+                    android:backgroundTint="#333333"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:text="ZAPISZ"
+                    android:textStyle="bold"
+                    android:textColor="@color/buttonText"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/saveProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:indeterminateTint="@color/colorAccent"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="START BIEGU"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/buttonText"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="ZAKOŃCZ"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColorPrimary"
+            android:backgroundTint="@color/red_error"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/showRoutesButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="HISTORIA TRAS"
+            android:textColor="@color/textColorSecondary"
+            android:backgroundTint="#00000000"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"/>
+
+    </LinearLayout>
+</RelativeLayout>
