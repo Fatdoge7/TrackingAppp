@@ -21,8 +21,6 @@
 |:---:|:---:|:---:|:---:|
 | <img src="screenshots/main_view.jpg" width="200"/> | <img src="screenshots/save_view.jpg" width="200"/> | <img src="screenshots/history_view.jpg" width="200"/> | <img src="screenshots/map_view.jpg" width="200"/> |
 
-*(Aby zdjęcia działały: Utwórz w projekcie folder "screenshots" i wrzuć tam swoje zrzuty ekranu zmieniając ich nazwy na te powyżej)*
-
 ---
 
 ## 🗺️ Użyte technologie i biblioteki
